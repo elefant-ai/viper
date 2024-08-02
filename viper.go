@@ -710,7 +710,7 @@ func Get(key string) any { return v.Get(key) }
 
 func (v *Viper) Get(key string) any {
 	lcaseKey := strings.ToLower(key)
-	val := v.find(lcaseKey, true)
+	val := v.find(lcaseKey, false)
 	if val == nil {
 		return nil
 	}
